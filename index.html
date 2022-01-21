@@ -13,24 +13,30 @@
       <img class="logo" src="img/Logo.png" alt="logo" />
 
       <div>
-        <a href="pagina2.html"
-          ><p class="campoDeTexto">Ingresa tu texto aqui</p></a
-        >
+            <button class="btnIngresaTuTexto" id="btnIngresarText">Ingresa tu mensaje aqui</button>
+        
+          <div class="cajaDeTexto">
+            <textarea class="textoDentroDeCaja" name="cajaDeTexto" " id="inputText" ></textarea>
+          </div>
+
+
       </div>
       <div class="btnFrame">
-        <input class="btnEncriptar" type="button" value="Encriptar" />
-        <input class="btnDesencriptar" type="button" value="Desencriptar" />
+        <input class="btnEncriptar" type="button" value="Encriptar" id="btnEncriptar"/>
+        <input class="btnDesencriptar" type="button" value="Desencriptar" id="btnDesencriptar"/>
       </div>
-      <div>
-        <!-- <input type="button" value="Copiar" /> -->
+      <div class="rectanguloBlanco">
+        
+        <textarea class="mensajeArea" name="mensajeArea" id="msjArea"></textarea>
+      
       </div>
-
-      <div class="rectanguloBlanco"></div>
       <div class="orientacionFrame">
         <p class="textoNingun">Ningn mensaje fue <br>encontrado</p>
         <p class="textoIngresa">Ingresa el texto que desees encriptar o <br> desencriptar</p>
       </div>
       <img class="muneco" src="img/Muñeco.png" alt="img-finder" />
+      
+      <input class="botonCopiar" type="button" value="Copiar" id="btnCopiar">
 
       <div class="indicacionesFrame">
         <img
@@ -41,5 +47,6 @@
         <p class="textAdvertencia">Solo letras minusculas y sin acentos</p>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
