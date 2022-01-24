@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/0bdeee9936.js" crossorigin="anonymous"></script>
     <title>Encrip Text</title>
   </head>
   <body>
@@ -13,40 +14,62 @@
       <img class="logo" src="img/Logo.png" alt="logo" />
 
       <div>
-            <button class="btnIngresaTuTexto" id="btnIngresarText">Ingresa tu mensaje aqui</button>
-        
-          <div class="cajaDeTexto">
-            <textarea class="textoDentroDeCaja" name="cajaDeTexto" " id="inputText" ></textarea>
-          </div>
+        <button class="btnIngresaTuTexto" id="btnIngresarText">
+          Ingrese el texto aqui
+        </button>
 
-
+        <div class="cajaDeTexto" id="inputTextStyle">
+          <textarea class="textoDentroDeCaja" name="cajaDeTexto" id="inputText"></textarea>
+        </div>
       </div>
       <div class="btnFrame">
-        <input class="btnEncriptar" type="button" value="Encriptar" id="btnEncriptar"/>
-        <input class="btnDesencriptar" type="button" value="Desencriptar" id="btnDesencriptar"/>
+        <input
+          class="btnEncriptar"
+          type="button"
+          value="Encriptar"
+          id="btnEncriptar"
+        />
+        <input
+          class="btnDesencriptar"
+          type="button"
+          value="Desencriptar"
+          id="btnDesencriptar"
+        />
       </div>
       <div class="rectanguloBlanco">
-        
-        <textarea class="mensajeArea" name="mensajeArea" id="msjArea"></textarea>
-      
+        <textarea
+          class="mensajeArea"
+          name="mensajeArea"
+          id="msjArea"
+        ></textarea>
       </div>
       <div class="orientacionFrame">
-        <p class="textoNingun">Ningn mensaje fue <br>encontrado</p>
-        <p class="textoIngresa">Ingresa el texto que desees encriptar o <br> desencriptar</p>
+        <p class="textoNingun">Ningún mensaje fue <br />encontrado</p>
+        <p class="textoIngresa">
+          Ingresa el texto que desees encriptar o <br />
+          desencriptar
+        </p>
       </div>
       <img class="muneco" src="img/Muñeco.png" alt="img-finder" />
       
-      <input class="botonCopiar" type="button" value="Copiar" id="btnCopiar">
-
+      <input class="botonCopiar" type="button" value="Copiar" id="btnCopiar" />
+     
+      <div class="mensajeDeHerror">
+        <i class="fas fa-check-circle"  id="icono"></i>
+        <i class="fas fa-exclamation-triangle" id="iconoAdvertencia" ></i>
+        <p class="textHerror" >Solo se pueden utilizar mayusculas,numeros,acentos ó caracteres especiales.</p>
+        <p class="textOk">El texto es valido para encriptar</p>
+      </div>
       <div class="indicacionesFrame">
         <img
           class="advertenciaIcon"
           src="img/iconoAdvertencia.png"
           alt="icono"
         />
-        <p class="textAdvertencia">Solo letras minusculas y sin acentos</p>
+        <p class="textAdvertencia">Solo letras minúsculas y sin acentos</p>
       </div>
     </div>
     <script src="app.js"></script>
+    
   </body>
 </html>

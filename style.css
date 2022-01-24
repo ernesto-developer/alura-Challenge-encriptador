@@ -28,6 +28,7 @@
   border-radius: 32px;
 }
 .muneco {
+  display: block;
   position: absolute;
   width: 336px;
   height: 304px;
@@ -35,26 +36,26 @@
   margin-top: 283px;
 }
 
-.btnIngresaTuTexto{
-    background: none;
-    border: none;
-    position: absolute;
-    width: 680px;
-    height: 48px;
-    margin-left: 240px;
-    margin-top: 168px;
-  
-    font-family: Inter;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 48px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #0a3871;
+.btnIngresaTuTexto {
+  display: block;
+  background: none;
+  border: none;
+  position: absolute;
+  width: 680px;
+  height: 48px;
+  margin-left: 240px;
+  margin-top: 168px;
 
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #0a3871;
+  cursor: pointer;
 }
-
 
 .indicacionesFrame {
   display: flex;
@@ -141,6 +142,7 @@
   line-height: 19px;
   text-align: center;
   color: #ffffff;
+  cursor: pointer;
 }
 .btnDesencriptar {
   /* display: flex; */
@@ -173,10 +175,12 @@
   text-align: center;
 
   color: #0a3871;
+  cursor: pointer;
 }
 .orientacionFrame {
   display: flex;
-  flex-direction: column;
+  display: block;
+  flex-direction: row;
   align-items: flex-start;
   padding: 0px;
 
@@ -186,7 +190,45 @@
   margin-left: 1032px;
   margin-top: 619px;
 }
-.textoNingun {
+.mensajeDeHerror {
+  width: 400px;
+  position: absolute;
+  margin-left: 245px;
+  margin-top: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  
+}
+.textHerror {
+  display: none;
+  width: 350px;
+  height: 18px;
+  margin-left: 10px;
+  margin-top: 0px;
+  text-align: left;
+  color: #495057;
+  opacity: 0.8;
+}
+.textOk{
+  display: none;
+  width: 350px;
+  height: 18px;
+  margin-left: 10px;
+  margin-top: 16px;
+  text-align: left;
+  color: #1fa92a;
+  opacity: 0.8;
+}
+#iconoAdvertencia{
+ 
+ color: red;
+ display: none;
+}
+
+
+  .textoNingun {
   position: static;
   width: 336px;
   height: 58px;
@@ -235,9 +277,8 @@
   margin: 16px 0px;
 }
 .cajaDeTexto {
-  
-    /* display: none; */
-    position: absolute;
+  display: none;
+  position: absolute;
 
   width: 680px;
   height: 288px;
@@ -245,54 +286,116 @@
   top: 168px;
 }
 .textoDentroDeCaja {
-    width: 680px;
-    height: 288px;
+  width: 680px;
+  height: 288px;
+  background: none;
+  border: none;
+  outline: none;
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 32px;
   line-height: 48px;
+  resize: none;
   /* or 48px */
 
   color: #0a3871;
 }
-.mensajeArea{
-    /*position: absolute;*/
-    /* display: none; */
-    width: 336px;
-    height: 781px;
-    left: 1032px;
-    top: 72px;
-    margin: 32px;
-    
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 150%;
-    /* or 36px */
-    
-    color: #495057;
+.mensajeArea {
+  /*position: absolute;*/
+  display: none;
+  border: none;
+  outline: none;
+  width: 336px;
+  height: 781px;
+  left: 1032px;
+  top: 72px;
+  margin: 32px;
+  resize: none;
 
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 150%;
+  /* or 36px */
+
+  color: #495057;
 }
 
-.botonCopiar{
-    /*display: flex;*/
-    display: none;
+.botonCopiar {
+  /*display: flex;*/
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 24px;
 
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 24px;
-    
-    position: absolute;
-    width: 336px;
-    height: 67px;
-    left: 1032px;
-    top: 885px;
-    
-    border: 1px solid #0A3871;
-    box-sizing: border-box;
-    border-radius: 24px;
+  position: absolute;
+  width: 336px;
+  height: 67px;
+  left: 1032px;
+  top: 885px;
 
-    
+  border: 1px solid #0a3871;
+  box-sizing: border-box;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+/* Activaciones o desactivaciones de elementos */
+
+.botonCopiar-activo {
+  display: block;
+}
+
+.btnIngresaTuTexto-inactivo {
+  display: none;
+}
+.cajaDeTexto-activo {
+  display: block;
+}
+.muneco-inactivo {
+  display: none;
+}
+
+.orientacionFrame-inactivo {
+  display: none;
+}
+.mensajeArea-activo {
+  display: block;
+}
+
+.mensajeDeHerror-inactivo{
+  display: none;
+
+}
+.textOk-activo{
+  display: block;
+}
+#iconoAdvertencia-activo-Ok{
+  display: block;
+}
+#iconoAdvertencia-activo-Herror{
+  display: block;
+  color: red;
+  
+}
+.fa-check-circle-activo{
+color: red;
+  /* display: block; */
+}
+.textHerror-activo{
+  display: block;
+  color: red;
+  
+}
+
+#icono{
+  display: none;
+  color: #1fa92a;
+}
+.mensajeDeHerror-enmarcado{
+
+  border: 1px solid red;
+
 }
